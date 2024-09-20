@@ -11,8 +11,8 @@ gs4_auth(cache = ".secrets", email = "x@gmail.com")
 
 # dataframe that holds usernames, passwords and other user data
 user_base <- tibble::tibble(
-  user = c("RDD", "user2"),
-  password = sapply(c("2023", "pass2"), sodium::password_store),
+  user = c("userexample", "user2"),
+  password = sapply(c("passwordexample", "pass2"), sodium::password_store),
   permissions = c("admin", "standard"),
   name = c("User One", "User Two")
 )
@@ -83,17 +83,10 @@ server <- function(input, output, session) {
       add_rank_list(
         text = "Drag from here",
         labels = list(
-          "Evaluation of MACEscrape vs NASS lists vs RDDscrape for hemp",
-          "Non-FSA List Frame Coverage Project",
-          "Off-farm grain stocks outreach program",
-          "CDL-modernization (platform agnostic)",
-          "FSA as a frame (CDL acreage estiamtion modernization)",
-          "Create and disseminate Ag Census",
-          "Propensity, Impact, and Estimation (PIE) research",
-          "Translating climate indicators into decisions Winter Wheat Pilot",
-          "Land Values Model",
-          "Census Estimation Research",
-          "Data driven edit limit research"
+          "Item1",
+          "Item2",
+          "Item3"
+        
           
         ),
         input_id = "rank_list_1"
